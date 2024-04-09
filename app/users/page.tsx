@@ -3,7 +3,6 @@ import Image from "next/image";
 interface User {
   id: number;
   albumId: number;
-  title: string;
   url: string;
 }
 const UsersPage = async () => {
@@ -15,8 +14,8 @@ const UsersPage = async () => {
       <ul className="grid grid-cols-4">
         {users.map((user) => (
           <li key={user.id} className="text-center m-1">
-            <p>{user.title}</p>
-            <Image src={user.url} alt={user.title} width={200} height={200} />
+            {user.albumId}
+            <img src={user.url} />
           </li>
         ))}
       </ul>
