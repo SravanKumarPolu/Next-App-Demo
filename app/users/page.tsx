@@ -16,8 +16,8 @@ const UsersPage = async () => {
   const users: User[] = await res.json();
   return (
     <>
-      <h1>Users</h1>
-      <p>{new Date().toLocaleTimeString()}</p>
+      <h1 className="text-center p-1.5 text-lg fornt-semibold">Colors</h1>
+      <p className="text-center p-2">{new Date().toLocaleTimeString()}</p>
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center">
         {users.map((user) => (
           <li key={user.id} className="text-center m-1">

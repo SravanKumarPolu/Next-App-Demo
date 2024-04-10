@@ -4,13 +4,15 @@ import ProductCard from "./components/ProductCard/ProductCard";
 
 export default function Home() {
   return (
-    <main className="">
-      <h1 className="text-center font-semibold text-lg ">Hellow word</h1>
+    <main className="p-2 h-screen bg1 shadow">
+      <h1 className="text-center font-semibold text-lg p-2 mt-8 ">
+        Hellow word
+      </h1>
       <div className="flex text-center ">
         <Link
           href="/users"
           className="p-[1rem] w-[8rem] border-[1px] border-black flex gap-1 ">
-          <h1> Users</h1>
+          <h1 className=" font-semibold "> Colors</h1>
           <span className=" hover:translate-x-2  duration-500 ease-in-out">
             <svg
               viewBox="0 0 24 24"
