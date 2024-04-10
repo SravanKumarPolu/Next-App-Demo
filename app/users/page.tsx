@@ -7,9 +7,12 @@ interface User {
   thumbnailUrl: string;
 }
 const UsersPage = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/photos", {
-    next: { revalidate: 10 },
-  });
+  const res = await fetch(
+    "https://jsonplaceholder.typicode.com/photos"
+    // {
+    // next: { revalidate: 10 },
+    // }
+  );
   const users: User[] = await res.json();
   return (
     <>
