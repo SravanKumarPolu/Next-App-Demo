@@ -16,15 +16,15 @@ const UsersPage = async () => {
   const users: User[] = await res.json();
   return (
     <>
-      <h1 className="text-center p-1.5 text-lg fornt-semibold">Colors</h1>
+      <h1 className="text-center font-semibold   text-lg p-2 mt-8">Colors</h1>
       <p className="text-center p-2">{new Date().toLocaleTimeString()}</p>
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center">
         {users.map((user) => (
           <li key={user.id} className="text-center m-1">
-            <div className="flex flex-col border rounded p-4">
+            <div className="flex flex-col border rounded p-4 ">
               <img
                 src={user.thumbnailUrl}
-                className="mx-auto rounded-full mb-2 w-34 h-34"
+                className="mx-auto rounded-full mb-4  w-34 h-34 "
               />
               <h1 className="text-lg font-semibold ">{user.title}</h1>
             </div>
